@@ -9,6 +9,7 @@
 		<title>Untitled</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/vex-theme-flat-attack.css" />
 		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
@@ -49,11 +50,11 @@
 				<div class="content">
 					<div class="inner">
 						<header>
-							<h2>Amet donec nullam fermentum</h2>
-							<p>Sed magna in pharetra ultricies dolor sit consequat magna.</p>
+							<h2>People helping people</h2>
+							<p>VNJ Law</p>
 						</header>
 						<ul class="actions">
-							<li><a href="#" class="button huge">Learn More</a></li>
+							<li><a href="#" id="myBtn" class="button huge">Learn More</a></li>
 						</ul>
 					</div>
 				</div>
@@ -188,6 +189,41 @@
 				<a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
 			</footer>
 
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						 <span class="close">×</span>
+						 <h2>What is going on?</h2>
+					</div>
+					<div class="modal-body inner">
+						<!-- The above form looks like this -->
+						<form method="post" action="#">
+							<div class="row uniform 50%">
+								<div class="6u 12u$(xsmall)">
+									<input name="name" id="name" value="" placeholder="Name" type="text">
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<input name="email" id="email" value="" placeholder="Email" type="email">
+								</div>
+								<div class="12u$">
+									<textarea name="information" id="information" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<div class="12u$">
+									<ul class="actions">
+										<li>
+											<input value="Send Message" class="special" type="submit">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.dropotron.min.js"></script>
@@ -196,6 +232,35 @@
 			<script src="js/util.js"></script>
 			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
 			<script src="js/main.js"></script>
+			<script src="js/vex.min.js"></script>
+			<script src="js/vex.dialog.min.js"></script>
+			<script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
+			<script>
+				// Get the modal
+				var modal = document.getElementById('myModal');
 
+				// Get the button that opens the modal
+				var btn = document.getElementById("myBtn");
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on the button, open the modal
+				btn.onclick = function() {
+					modal.style.display = "block";
+				}
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+							modal.style.display = "none";
+					}
+				}
+			</script>
 	</body>
 </html>
